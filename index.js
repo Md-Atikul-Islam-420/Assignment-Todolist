@@ -29,5 +29,13 @@ function addTask(taskText) {
 
     const actionsDiv = document.createElement('div');
 
+    // Complete button
+    const completeBtn = document.createElement('button');
+    completeBtn.className = 'btn btn-success btn-sm me-1';
+    completeBtn.innerHTML = '✔';
+    completeBtn.addEventListener('click', () => {
+      taskSpan.style.textDecoration = taskSpan.style.textDecoration === 'line-through' ? '' : 'line-through';
+    });
 
 
+}
