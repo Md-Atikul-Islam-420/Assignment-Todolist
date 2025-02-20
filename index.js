@@ -38,4 +38,17 @@ function addTask(taskText) {
     });
 
 
+    // Edit button
+   const editBtn = document.createElement('button');
+   editBtn.className = 'btn btn-warning btn-sm me-1';
+   editBtn.innerHTML = '✎';
+   editBtn.addEventListener('click', () => {
+     const newTaskText = prompt('Edit task:', taskSpan.textContent);
+     if (newTaskText !== null && newTaskText.trim() !== '') {
+       taskSpan.textContent = newTaskText.trim();
+     }
+   });
+
+
+
 }
