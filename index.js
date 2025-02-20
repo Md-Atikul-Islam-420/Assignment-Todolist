@@ -50,5 +50,23 @@ function addTask(taskText) {
    });
 
 
+   // Delete button
+   const deleteBtn = document.createElement('button');
+   deleteBtn.className = 'btn btn-danger btn-sm';
+   deleteBtn.innerHTML = '🗑';
+   deleteBtn.addEventListener('click', () => {
+     todoList.removeChild(listItem);
+   });
+
+   actionsDiv.appendChild(completeBtn);
+   actionsDiv.appendChild(editBtn);
+   actionsDiv.appendChild(deleteBtn);
+
+   listItem.appendChild(taskSpan);
+   listItem.appendChild(actionsDiv);
+
+   todoList.appendChild(listItem);
+
+
 
 }
